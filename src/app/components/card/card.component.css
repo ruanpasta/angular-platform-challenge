@@ -1,0 +1,17 @@
+.card-container {
+  border-radius: 0;
+  padding: 1rem 1rem;
+}
+
+.card-container h3 {
+  color: #666a72;
+}
+
+.card-container p {
+  color: #999ca1;
+}
+
+.card-blank {
+  background-color: transparent;
+  border: none;
+}

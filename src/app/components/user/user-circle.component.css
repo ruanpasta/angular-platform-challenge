@@ -1,0 +1,26 @@
+.user-circle {
+  display: flex;
+  align-items: center;
+}
+
+.circle {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #eaeaea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.circle i {
+  font-size: 20px;
+  color: #333;
+}
+
+.username {
+  color: #fff;
+  font-weight: normal;
+  font-size: 0.875rem;
+}

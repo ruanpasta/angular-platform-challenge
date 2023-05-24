@@ -1,0 +1,14 @@
+<app-navbar />
+
+<ng-container *ngIf="isLoggedIn$ | async; then loggedIn else notLoggedIn"></ng-container>
+
+<ng-template #loggedIn>
+  <app-layout-system>
+    <router-outlet></router-outlet>
+  </app-layout-system>
+</ng-template>
+
+
+<ng-template #notLoggedIn>
+  <router-outlet></router-outlet>
+</ng-template>

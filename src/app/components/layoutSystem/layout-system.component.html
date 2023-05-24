@@ -1,0 +1,46 @@
+<div class="custom-bar">
+  <div class="icon-container" [hidden]="!open">
+    <app-user-circle username="Fulano Lorem Ipsum"></app-user-circle>
+  </div>
+  <div class="divider" [hidden]="!open"></div>
+  <div class="icon-container">
+    <a href="#" (click)="$event.preventDefault(); toggleMenu()">
+      <i class="bi bi-list"></i>
+    </a>
+  </div>
+  <app-system-logo />
+</div>
+
+<div class="container-fluid h-100 bg-light d-flex app-content">
+  <div class="menu" [hidden]="!open">
+    <ul class="list-group">
+      <a
+        href="#"
+        class="text-decoration-none"
+        (click)="$event.preventDefault(); toggleMenuSelection('home')"
+      >
+        <li
+          class="list-group-item"
+          [ngClass]="{ active: menuSelected === 'home' }"
+        >
+          Home
+        </li>
+      </a>
+      <a
+        href="#"
+        class="text-decoration-none"
+        (click)="$event.preventDefault(); toggleMenuSelection('menu1')"
+      >
+        <li
+          class="list-group-item"
+          [ngClass]="{ active: menuSelected === 'menu1' }"
+        >
+          Menu 1
+        </li>
+      </a>
+    </ul>
+  </div>
+  <div class="overflow-auto w-100">
+    <ng-content></ng-content>
+  </div>
+</div>

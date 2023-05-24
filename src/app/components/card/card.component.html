@@ -1,0 +1,20 @@
+<div class="container-fluid card card-container" [ngClass]="{ 'card-blank': isBlank }">
+  <div class="row d-flex align-items-center">
+    <div class="col" [ngClass]="{'col-sm-6': hasSide }" *ngIf="title || description; else content">
+      <h3>{{ title }}</h3>
+      <p>{{ description }}</p>
+    </div>
+    <ng-template #content>
+      <div class="col p-0" [ngClass]="{'col-sm-6': hasSide }">
+        <ng-content select="[custom-header]" />
+      </div>
+    </ng-template>
+    <div class="col-sm-6 d-flex justify-content-end" *ngIf="hasSide">
+      <ng-content select="[side]" />
+    </div>
+  </div>
+  <div *ngIf="hasContent">
+    <hr class="hr mb-1 mt-1">
+    <ng-content select="[content]" />
+  </div>
+</div>

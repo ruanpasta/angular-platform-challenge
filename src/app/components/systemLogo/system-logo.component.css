@@ -1,0 +1,25 @@
+.system-logo {
+  color: #d8d8d9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  font-size: 1.5rem;
+  padding-left: 1rem;
+}
+
+.system-logo i {
+  font-size: 1rem;
+  color: #80858e;
+}
+
+.bigger {
+  font-size: 3rem;
+  font-weight: bold;
+  color: black;
+}
+
+.bigger i {
+  font-size: 2rem;
+  color: #80858e;
+}

@@ -1,0 +1,45 @@
+<!-- Page header: Menu 1 -->
+<app-header
+  title="Menu 1"
+  description="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+  [breadcrumbItems]="breadcrumbItems"
+/>
+
+<div class="p-4">
+  <!-- Card: Title -->
+  <app-card
+    title="Título"
+    description="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+    [isBlank]="true"
+  />
+
+  <div class="px-3 d-flex flex-column gap-4">
+    <!-- Card: Find by code -->
+    <app-card
+      title="Busca de código"
+      description="Lorem Ipsum is simply dummy text of the printing typesetting industry."
+      [hasContent]="true"
+    >
+      <div content class="col-6">
+        <!-- Input Group: Find by code -->
+        <div class="input-group mt-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Digite o código"
+          />
+          <button
+            class="btn btn-primary"
+            type="button"
+            aria-label="Botao que envia a pesquisa por codigo "
+          >
+            <i class="bi bi-search"></i>
+          </button>
+        </div>
+      </div>
+    </app-card>
+
+    <!-- Card: Code list -->
+    <app-code-list />
+  </div>
+</div>

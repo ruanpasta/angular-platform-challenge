@@ -1,0 +1,9 @@
+<app-card [hasSide]="true">
+  <div custom-header class="header-container">
+    <h3>{{ title }}</h3>
+    <p>{{ description }}</p>
+  </div>
+  <div side>
+    <app-breadcrumb [items]="breadcrumbItems" />
+  </div>
+</app-card>

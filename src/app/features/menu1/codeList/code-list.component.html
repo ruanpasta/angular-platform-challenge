@@ -1,0 +1,123 @@
+<app-card
+  title="Listta de código"
+  description="Lorem Ipsum is simply dummy text of the printing typesetting industry."
+  [hasContent]="true"
+>
+  <div content>
+    <!-- Filtros tabela -->
+    <div class="row align-items-center mt-2">
+      <!-- Quantidade de items na tabela -->
+      <div class="col-md-6 d-flex align-items-baseline gap-2 mt-1">
+        <p>Mostrar</p>
+        <div class="w-10">
+          <select class="form-select" [(ngModel)]="selectedItemsPerPage">
+            <option value="10" selected>10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+            <option value="75">75</option>
+            <option value="100">100</option>
+          </select>
+        </div>
+        <p>resultados</p>
+      </div>
+
+      <!-- Campo de busca da tabela -->
+      <div class="col-md-6 text-end">
+        <input
+          type="text"
+          class="form-control search-input"
+          placeholder="Busca"
+        />
+      </div>
+    </div>
+
+    <div class="table-responsive">
+      <table class="table">
+        <!-- Cabeçalho da tabela -->
+        <thead>
+          <tr>
+            <th scope="col">
+              <input
+                type="checkbox"
+                aria-describedby="Seleciona todos os elementos da tabela"
+              />
+            </th>
+            <th scope="col" *ngFor="let column of columns">
+              {{ column.label }}
+            </th>
+            <th scope="col">Ações</th>
+          </tr>
+        </thead>
+        <!-- Corpo da tabela -->
+        <tbody>
+          <tr *ngFor="let item of items">
+            <td>
+              <input
+                type="checkbox"
+                [attr.aria-describedby]="
+                  'Seleciona o elemento da tabela: ' + item.codigo
+                "
+              />
+            </td>
+            <td *ngFor="let column of columns">
+              {{ item[column.key] }}
+            </td>
+            <td>
+              <button
+                class="btn btn-secondary"
+                aria-label="Botao para acessar as acoes do item da tabela"
+              >
+                <span class="bi bi-gear"></span>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Rodape tabela -->
+    <div class="d-flex justify-content-between row">
+      <div class="col-md-6">
+        Mostrando 1 a {{ selectedItemsPerPage }} de {{ totalItems }}
+      </div>
+      <div class="col-md-6">
+        <ul class="pagination">
+          <li class="page-item">
+            <a
+              class="page-link"
+              href="#"
+              (click)="$event.preventDefault()"
+              disabled
+              >Anterior</a
+            >
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#" (click)="$event.preventDefault()"
+              >1</a
+            >
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#" (click)="$event.preventDefault()"
+              >2</a
+            >
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#" (click)="$event.preventDefault()"
+              >3</a
+            >
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#" (click)="$event.preventDefault()"
+              >4</a
+            >
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#" (click)="$event.preventDefault()"
+              >Próximo</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</app-card>

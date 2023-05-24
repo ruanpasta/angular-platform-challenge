@@ -1,0 +1,66 @@
+.custom-bar {
+  display: flex;
+  align-items: center;
+  background-color: #021217;
+  padding: 10px;
+}
+
+.icon-container {
+  margin-right: 10px;
+  color: #fff;
+}
+
+.icon-container a {
+  color: #fff;
+}
+
+.icon-container i {
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.icon-container i:hover {
+  color: #35b2d7;
+}
+
+.divider {
+  height: 20px;
+  width: 2px;
+  background-color: #35b2d7;
+  margin: 0 10px;
+}
+
+.layout {
+  display: flex;
+}
+
+.menu {
+  background-color: #2b2c2d;
+  height: 100%;
+  width: 195px;
+  min-width: 195px;
+}
+
+.menu .list-group-item {
+  cursor: pointer;
+  background-color: #2b2c2d;
+  border-radius: 0;
+  color: #fff;
+  border: 1px solid #021217;
+  border-left: none;
+}
+
+.menu .list-group-item:hover,
+.menu .list-group-item.active {
+  border-left: 4px solid #35b2d7;
+  color: #35b2d7;
+}
+
+.menu.selected {
+  background-color: #38b3d6;
+}
+
+.app-content {
+  max-height: calc(100% - 113px);
+  padding: 0;
+}

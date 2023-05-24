@@ -1,0 +1,8 @@
+.center-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 60%;
+  width: 100%;
+}
