@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "bacen-challenge2": {
+    "angular-platform-challenge": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -16,7 +16,7 @@
             "allowedCommonJsDependencies": [
               "zone.js"
             ],
-            "outputPath": "dist/bacen-challenge2",
+            "outputPath": "dist/angular-platform-challenge",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -63,10 +63,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "bacen-challenge2:build:production"
+              "browserTarget": "angular-platform-challenge:build:production"
             },
             "development": {
-              "browserTarget": "bacen-challenge2:build:development"
+              "browserTarget": "angular-platform-challenge:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -74,7 +74,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "bacen-challenge2:build"
+            "browserTarget": "angular-platform-challenge:build"
           }
         },
         "test": {

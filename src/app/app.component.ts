@@ -10,7 +10,7 @@ import { AuthState } from './store/auth.reducer';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  title = 'bacen-challenge';
+  title = 'angular-platform-challenge';
   isLoggedIn$: Observable<boolean>;
 
   constructor(
