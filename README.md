@@ -1,27 +1,55 @@
 # Angular Platform Challenge
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.2.
+Bem-vindo(a) ao AngularPlatformChallenge.
+Este projeto foi desenvolvido para atender a um desafio de curto prazo de aproximadamente 1 dia.
+Foram criados diversos componentes no projeto usando o bootstrap e se encontram na pasta _src/app/components_.
 
-## Development server
+O layout e design do projeto estao de acordo com a proposta do desafio.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+[Angular CLI](https://github.com/angular/angular-cli) version 16.0.2.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Como Rodar o Projeto
+Antes de começar, certifique-se de ter o Node.js instalado na sua máquina. Caso não tenha, você pode baixá-lo em https://nodejs.org/.
 
-## Build
+Clone este repositório para o seu computador usando o seguinte comando:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```bash
+git clone https://github.com/ruanpasta/angular-platform-challenge
+```
 
-## Running unit tests
+Navegue até o diretório do projeto:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+cd angular-platform-challenge
+```
 
-## Running end-to-end tests
+Instale as dependências do projeto usando o npm ou yarn:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```bash
+npm install
+# ou
+yarn install
+```
+Agora, você pode executar o projeto localmente com o comando:
 
-## Further help
+```bash
+ng serve
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Abra o seu navegador e acesse http://localhost:4200/ para visualizar o AngularPlatformChallenge em ação!
+
+## Como Gerar o Build do Projeto
+Se você deseja construir uma versão otimizada do projeto para implantação em produção, siga as etapas abaixo:
+
+Certifique-se de que está no diretório do projeto:
+
+```bash
+cd angular-platform-challenge
+```
+Execute o seguinte comando para criar o build:
+
+```bash
+ng build
+```
+Após a conclusão, o build otimizado estará disponível no diretório `dist/angular-platform-challenge`. Você pode implantar esses arquivos diretamente em um servidor web ou qualquer plataforma de hospedagem de sua escolha.
